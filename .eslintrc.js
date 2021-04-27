@@ -30,6 +30,7 @@ module.exports = {
         js: "never",
       },
     ],
+    "arrow-parens": ["error", "always"],
     // allow optionalDependencies
     "import/no-extraneous-dependencies": [
       "error",

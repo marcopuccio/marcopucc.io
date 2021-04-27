@@ -9,7 +9,7 @@ export default {
     let socials = [];
     const profile = getters.profile;
     if (profile) {
-      socials = Object.values(profile.social).filter(s => s.visible);
+      socials = Object.values(profile.social).filter((s) => s.visible);
     }
     return socials;
   },
@@ -21,7 +21,7 @@ export default {
   },
   jobs(state) {
     return Object.values(state.jobs)
-      .filter(s => s.visible)
-      .sort((a, b) => a.order > b.order);
+      .filter((s) => s.visible)
+      .sort((a, b) => a.order - b.order);
   },
 };
