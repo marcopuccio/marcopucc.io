@@ -1,9 +1,10 @@
 import React from "react";
 
+import { Avatar } from "../Avatar";
 export const Header: React.FC = () => {
   return (
     <header>
-      <div>avatar</div>
+      <Avatar />
       <div>name</div>
     </header>
   );
