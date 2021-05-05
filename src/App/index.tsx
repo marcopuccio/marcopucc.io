@@ -11,7 +11,7 @@ export const App: React.FC = () => {
       <section className="mt-5">
         <Header />
       </section>
-      <section>
+      <section className="my-2">
         <Menu />
       </section>
     </div>

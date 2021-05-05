@@ -3,12 +3,13 @@ import React from "react";
 import { Avatar } from "../Avatar";
 import { Title } from "../Title";
 import { Subtitle } from "../Subtitle";
+import { Menu } from "../Menu";
 
 export const Header: React.FC = () => {
   return (
     <header className="container">
       <div className="columns is-vcentered">
-        <div className="column is-one-third">
+        <div className="column is-one-quarter">
           <Avatar />
         </div>
         <div className="column">
