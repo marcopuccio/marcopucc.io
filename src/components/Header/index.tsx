@@ -3,7 +3,6 @@ import React from "react";
 import { Avatar } from "../Avatar";
 import { Title } from "../Title";
 import { Subtitle } from "../Subtitle";
-import { Menu } from "../Menu";
 
 export const Header: React.FC = () => {
   return (
