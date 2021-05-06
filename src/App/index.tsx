@@ -4,6 +4,7 @@ import "./App.css";
 
 import { Header } from "../components/Header";
 import { Menu } from "../components/Menu";
+import { Pitch } from "../components/Pitch";
 
 export const App: React.FC = () => {
   return (
@@ -15,6 +16,9 @@ export const App: React.FC = () => {
           </div>
           <div className="content">
             <Menu />
+            <section className="section">
+              <Pitch />
+            </section>
           </div>
         </div>
       </div>
