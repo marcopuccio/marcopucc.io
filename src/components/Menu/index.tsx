@@ -10,6 +10,7 @@ export const Menu: React.FC = () => {
           className="navbar-item has-text-info"
           href="https://www.linkedin.com/in/marcopuccio/"
           target="_blank"
+          rel="noreferrer"
         >
           LinkedIn
         </a>
@@ -17,16 +18,20 @@ export const Menu: React.FC = () => {
           className="navbar-item has-text-grey"
           href="https://github.com/marcopuccio"
           target="_blank"
+          rel="noreferrer"
         >
           GitHub
         </a>
         <div className="navbar-item has-dropdown is-hoverable">
-          <a className="navbar-link has-text-danger">Archive</a>
+          <a className="navbar-link has-text-danger" href="#">
+            Archive
+          </a>
           <div className="navbar-dropdown">
             <a
               className="navbar-item has-text-danger"
               href="https://2018.marcopuccio.me/"
               target="_blank"
+              rel="noreferrer"
             >
               2018.marcopuccio.me
             </a>
@@ -34,6 +39,7 @@ export const Menu: React.FC = () => {
               className="navbar-item has-text-danger"
               href="https://2016.marcopuccio.me/"
               target="_blank"
+              rel="noreferrer"
             >
               2016.marcopuccio.me
             </a>
@@ -41,7 +47,8 @@ export const Menu: React.FC = () => {
             <a
               className="navbar-item has-text-danger"
               href="https://github.com/marcopuccio/marcopuccio.github.io/issues/new"
-              target="_new"
+              target="_blank"
+              rel="noreferrer"
             >
               <small>Report an issue</small>
             </a>
