@@ -5,7 +5,9 @@ export const Menu: React.FC = () => {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-menu is-justify-content-center">
-        <a className="navbar-item has-text-success">Home</a>
+        <a className="navbar-item has-text-success" href="/">
+          Home
+        </a>
         <a
           className="navbar-item has-text-info"
           href="https://www.linkedin.com/in/marcopuccio/"
@@ -14,16 +16,9 @@ export const Menu: React.FC = () => {
         >
           LinkedIn
         </a>
-        <a
-          className="navbar-item has-text-grey"
-          href="https://github.com/marcopuccio"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub
-        </a>
+
         <div className="navbar-item has-dropdown is-hoverable">
-          <a className="navbar-link has-text-danger" href="#">
+          <a className="navbar-link has-text-danger" href="/">
             Archive
           </a>
           <div className="navbar-dropdown">
@@ -54,7 +49,17 @@ export const Menu: React.FC = () => {
             </a>
           </div>
         </div>
-        <a className="navbar-item has-text-primary">Contact</a>
+        <a
+          className="navbar-item has-text-grey"
+          href="https://github.com/marcopuccio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
+        {/* <a className="navbar-item has-text-primary" href="/">
+          Contact
+        </a> */}
       </div>
     </nav>
   );
