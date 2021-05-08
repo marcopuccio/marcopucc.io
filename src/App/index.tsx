@@ -8,8 +8,8 @@ import { Pitch } from "../components/Pitch";
 
 export const App: React.FC = () => {
   return (
-    <div className="App-container">
-      <div className="card">
+    <div className="App-container pt-3">
+      <div className="card mx-3">
         <div className="card-content">
           <div className="media">
             <Header />
