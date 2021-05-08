@@ -1,40 +1,46 @@
 import React from "react";
+
+import { MenuItem, MenuItemProps } from "../MenuItem";
+import { FAIcon } from "../FAIcon";
 import "./Menu.css";
+
+const menuItems: MenuItemProps[] = [
+  {
+    color: "is-primary",
+    external: false,
+    href: "/#",
+    children: <span>Home</span>,
+  },
+  {
+    color: "is-info",
+    external: true,
+    href: "https://www.linkedin.com/in/marcopuccio/",
+    children: (
+      <>
+        <span>LinkedIn</span>
+        <FAIcon faIconName="linkedin" />
+      </>
+    ),
+  },
+  {
+    color: "is-black",
+    external: true,
+    href: "https://www.linkedin.com/in/marcopuccio/",
+    children: (
+      <>
+        <span>GitHub</span>
+        <FAIcon faIconName="github" />
+      </>
+    ),
+  },
+];
 
 export const Menu: React.FC = () => {
   return (
     <div className="is-flex is-flex-direction-row is-justify-content-center is-flex-wrap-wrap">
-      <div className="is-flex">
-        <a className="button is-primary is-inverted" href="/#">
-          <span>Home</span>
-        </a>
-      </div>
-      <div className="is-flex">
-        <a
-          className="button is-info is-inverted"
-          href="https://www.linkedin.com/in/marcopuccio/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span>LinkedIn</span>
-          <span className="icon">
-            <i className="fab fa-linkedin"></i>
-          </span>
-        </a>
-      </div>
-      <div className="is-flex">
-        <a
-          className="button is-white"
-          href="https://github.com/marcopuccio"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <span>GitHub</span>
-          <span className="icon">
-            <i className="fab fa-github"></i>
-          </span>
-        </a>
-      </div>
+      {menuItems.map((item, key) => (
+        <MenuItem {...item} key={key} />
+      ))}
 
       {/* <div className="dropdown is-active">
         <div className="dropdown-trigger">
@@ -85,8 +91,7 @@ export const Menu: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-       */}
+      </div> */}
     </div>
   );
 };
