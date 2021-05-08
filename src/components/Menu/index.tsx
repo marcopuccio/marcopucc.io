@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { MenuItem, MenuItemProps } from "../MenuItem";
 import { FAIcon } from "../FAIcon";
@@ -35,19 +35,53 @@ const menuItems: MenuItemProps[] = [
   },
 ];
 
+const archiveDropdownMenuItems: MenuItemProps[] = [
+  {
+    color: "is-danger",
+    external: true,
+    href: "https://2018.marcopuccio.me/",
+    children: <span>2018.marcopuccio.me</span>,
+  },
+  {
+    color: "is-danger",
+    external: true,
+    href: "https://2016.marcopuccio.me/",
+    children: <span>2016.marcopuccio.me</span>,
+  },
+  {
+    color: "is-danger",
+    external: true,
+    href: "https://github.com/marcopuccio/marcopuccio.github.io/issues/new",
+    children: <small>Report an issue</small>,
+  },
+];
+
 export const Menu: React.FC = () => {
+  const [archiveDropdownActive, setArchiveDropdownActive] = useState<boolean>(
+    false
+  );
+
+  const toggleArchiveDropdown = () => {
+    setArchiveDropdownActive((isActive) => !isActive);
+  };
+
   return (
     <div className="is-flex is-flex-direction-row is-justify-content-center is-flex-wrap-wrap">
-      {menuItems.map((item, key) => (
-        <MenuItem {...item} key={key} />
+      {menuItems.map((item, index) => (
+        <MenuItem {...item} key={index} />
       ))}
 
-      {/* <div className="dropdown is-active">
+      <div
+        className={`dropdown is-right ${
+          !!archiveDropdownActive ? "is-active" : ""
+        }`}
+      >
         <div className="dropdown-trigger">
           <button
             className="button is-inverted is-danger"
             aria-haspopup="true"
             aria-controls="archive-dropdown"
+            onClick={toggleArchiveDropdown}
           >
             <span>Archive</span>
             <span className="icon is-small">
@@ -57,41 +91,14 @@ export const Menu: React.FC = () => {
         </div>
         <div className="dropdown-menu" id="archive-dropdown" role="menu">
           <div className="dropdown-content">
-            <div className="dropdown-item">
-              <a
-                className="is-danger is-inverted"
-                href="https://2018.marcopuccio.me/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                2018.marcopuccio.me
-              </a>
-            </div>
-            <div className="dropdown-item">
-              <a
-                className="is-danger is-inverted"
-                href="https://2016.marcopuccio.me/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                2016.marcopuccio.me
-              </a>
-            </div>
-
-            <hr className="dropdown-divider" />
-            <div className="dropdown-item">
-              <a
-                className="is-danger is-inverted"
-                href="https://github.com/marcopuccio/marcopuccio.github.io/issues/new"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <small>Report an issue</small>
-              </a>
-            </div>
+            {archiveDropdownMenuItems.map((item, index) => (
+              <div className="dropdown-item" key={index}>
+                <MenuItem {...item} />
+              </div>
+            ))}
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
