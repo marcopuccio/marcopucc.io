@@ -8,7 +8,7 @@ import "./Header.css";
 export const Header: React.FC = () => {
   return (
     <header className="Header-root is-flex is-flex-direction-column is-align-content-center ">
-      <div className="is-flex">
+      <div className="is-flex my-4">
         <Avatar />
       </div>
       <div className="has-text-centered">
