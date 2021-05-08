@@ -1,5 +1,8 @@
-.App-container {
+.App-root {
+  background-color: #f5f3fd;
+  min-height: 100vh;
+}
+.App-cardContainer {
   margin: auto;
   max-width: 800px;
-  min-height: 77vh;
 }
