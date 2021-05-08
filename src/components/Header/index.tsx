@@ -3,18 +3,17 @@ import React from "react";
 import { Avatar } from "../Avatar";
 import { Title } from "../Title";
 import { Subtitle } from "../Subtitle";
+import "./Header.css";
 
 export const Header: React.FC = () => {
   return (
-    <header className="container">
-      <div className="columns is-vcentered">
-        <div className="column is-one-quarter">
-          <Avatar />
-        </div>
-        <div className="column">
-          <Title>Marco Puccio</Title>
-          <Subtitle>Software Engineer & Professor</Subtitle>
-        </div>
+    <header className="Header-root is-flex is-flex-direction-column is-align-content-center ">
+      <div className="is-flex">
+        <Avatar />
+      </div>
+      <div className="has-text-centered">
+        <Title>Marco Puccio</Title>
+        <Subtitle>Software Engineer & Professor</Subtitle>
       </div>
     </header>
   );
