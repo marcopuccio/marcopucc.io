@@ -25,7 +25,7 @@ const menuItems: MenuItemProps[] = [
   {
     color: "is-black",
     external: true,
-    href: "https://www.linkedin.com/in/marcopuccio/",
+    href: "https://github.com/marcopuccio/",
     children: (
       <>
         <span>GitHub</span>
