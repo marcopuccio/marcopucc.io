@@ -4,12 +4,12 @@ import "./Menu.css";
 export const Menu: React.FC = () => {
   return (
     <div className="is-flex is-flex-direction-row is-justify-content-center is-flex-wrap-wrap">
-      <div className="is-flex px-4">
+      <div className="Menu-item is-flex px-4 py-1">
         <a className="has-text-success" href="/#">
           Home
         </a>
       </div>
-      <div className="is-flex px-4">
+      <div className="Menu-item is-flex px-4 py-1">
         <a
           className="has-text-info"
           href="https://www.linkedin.com/in/marcopuccio/"
@@ -17,9 +17,12 @@ export const Menu: React.FC = () => {
           rel="noreferrer"
         >
           LinkedIn
+          <span className="icon">
+            <i className="fab fa-linkedin"></i>
+          </span>
         </a>
       </div>
-      <div className="is-flex px-4">
+      <div className="Menu-item is-flex px-4 py-1">
         <a
           className="has-text-grey"
           href="https://github.com/marcopuccio"
@@ -27,6 +30,9 @@ export const Menu: React.FC = () => {
           rel="noreferrer"
         >
           GitHub
+          <span className="icon">
+            <i className="fab fa-github"></i>
+          </span>
         </a>
       </div>
       {/* <div className="has-dropdown is-hoverable">

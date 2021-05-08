@@ -1,3 +1,12 @@
 .has-dropdown a::after {
   border-color: hsl(348, 100%, 61%) !important;
 }
+
+.Menu-item {
+  text-decoration: underline;
+}
+
+.Menu-item:hover {
+  background-color: hsl(48, 100%, 96%);
+  border-radius: 4px;
+}
