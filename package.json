@@ -9,7 +9,10 @@
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src",
-    "deploy": "yarn run build; firebase deploy"
+    "firebase:login": "firebase login",
+    "firebase:logout": "firebase logout",
+    "firebase:deploy": "firebase deploy",
+    "deploy": "yarn run build; yarn firebase:deploy"
   },
   "dependencies": {
     "bulma": "^0.5.1",
