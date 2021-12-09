@@ -39,27 +39,26 @@ const archiveDropdownMenuItems: MenuItemProps[] = [
   {
     color: "is-danger",
     external: true,
-    href: "https://2018.marcopuccio.me/",
-    children: <span>2018.marcopuccio.me</span>,
+    href: "https://2018.marcopucc.io/",
+    children: <span>2018.marcopucc.io</span>,
   },
   {
     color: "is-danger",
     external: true,
-    href: "https://2016.marcopuccio.me/",
-    children: <span>2016.marcopuccio.me</span>,
+    href: "https://2016.marcopucc.io/",
+    children: <span>2016.marcopucc.io</span>,
   },
   {
     color: "is-danger",
     external: true,
-    href: "https://github.com/marcopuccio/marcopuccio.github.io/issues/new",
+    href: "https://github.com/marcopuccio/marcopucc.io/issues/new",
     children: <small>Report an issue</small>,
   },
 ];
 
 export const Menu: React.FC = () => {
-  const [archiveDropdownActive, setArchiveDropdownActive] = useState<boolean>(
-    false
-  );
+  const [archiveDropdownActive, setArchiveDropdownActive] =
+    useState<boolean>(false);
 
   const toggleArchiveDropdown = () => {
     setArchiveDropdownActive((isActive) => !isActive);
