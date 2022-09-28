@@ -9,12 +9,11 @@ export const Pitch: React.FC = () => {
       </p>
       <p className="is-size-5 has-text-justified has-text-weight-light is-family-code">
         I’m passionate about learning and teaching, and that’s why I think that
-        knowledge doesn’t belong to anyone, so it must be shared with others.
+        knowledge should be shared with others.
       </p>
       <p className="is-size-5 has-text-justified has-text-weight-light is-family-code">
-        My goal is to keep learning and growing professionally by driving value
-        with innovative solutions and new technologies to satisfy people modern
-        needs.
+        My goal is to drive innovative solutions with technology to satisfy
+        people modern needs.
       </p>
     </>
   );
