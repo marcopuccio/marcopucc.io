@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
       </div>
       <div className="has-text-centered">
         <Title>Marco Puccio</Title>
-        <Subtitle>Technology Entrepreneur</Subtitle>
+        <Subtitle>Tech Entrepreneur</Subtitle>
       </div>
     </header>
   );
